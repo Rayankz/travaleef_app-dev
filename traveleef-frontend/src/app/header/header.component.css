@@ -1,0 +1,38 @@
+/* Styles existants pour le header */
+@font-face {
+  font-family: 'More Sugar';
+  src: url('../../assets/fonts/More_Sugar/MoreSugar-Regular.ttf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+header {
+  font-family: 'More Sugar', sans-serif;
+  background-color: #C9DDB0;
+  padding: 15px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+/* ... autres styles ... */
+
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.btn-primary {
+  color: #333333;
+  background-color: #C9DDB0;
+  border-color: #C9DDB0;
+}
+
+.btn-primary:hover {
+  background-color: #ECFDD8;
+}
