@@ -1,0 +1,35 @@
+/* Styles pour le footer, incluant la mise en forme des colonnes,
+   du texte, des liens, etc.  Utilise les polices et couleurs
+   de la charte graphique de traveleef */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+footer {
+  background-color: #C9DDB0;
+  font-family: 'Montserrat';
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 23%;
+}
+
+h3 {
+  margin-top: 0;
+}

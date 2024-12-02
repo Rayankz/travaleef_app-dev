@@ -1,0 +1,44 @@
+/* Styles pour le header, incluant la mise en forme du logo,
+   du menu, des liens, etc. Utilise les polices et couleurs
+   de la charte graphique de traveleef*/
+@font-face {
+  font-family: 'More Sugar';
+  src: url('../../assets/fonts/More_Sugar/MoreSugar-Thin.ttf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+header {
+  background-color: #C9DDB0;
+  font-family: 'More Sugar';
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 20px; /* Ajuste la hauteur selon ton logo */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+}
