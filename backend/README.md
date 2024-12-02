@@ -29,3 +29,15 @@ Ouvrir un navigateur et aller sur l'URL localhost:3000/
 
 
 
+## activer l'environnment
+python -m venv venv
+
+pip install python-dotenv
+pip install flask
+
+FLASK_APP=flaskr
+FLASK_ENV=development
+
+ venv\Scripts\activate
+
+flask run
