@@ -1,0 +1,40 @@
+<div class="accueil-container">
+    <h1>Accueil :</h1>
+  
+    <!-- Formulaire de recherche -->
+    <div class="formulaire-recherche">
+      <input type="text" placeholder="Départ" />
+      <input type="text" placeholder="Arrivée" />
+      <input type="date" placeholder="Date de départ" />
+      <input type="date" placeholder="Date d'arrivée" />
+      <input type="number" placeholder="2" min="1" />
+      <button>Rechercher</button>
+    </div>
+  
+    <!-- Carte interactive -->
+    <div class="carte-container">
+      <div id="map"></div> <!-- Conteneur pour la carte interactive Leaflet -->
+    </div>
+  
+    <!-- Suggestions de voyages -->
+    <h2>Suggestions de voyages :</h2>
+    <div class="suggestions">
+      <div class="suggestion" *ngFor="let suggestion of suggestions">
+        <div class="suggestion-header">
+          <h3>{{ suggestion.trajet }}</h3>
+        </div>
+        <div class="suggestion-content">
+          <img src="../../assets/img/paris.jpg.webp" alt="{{ suggestion.trajet }}" />
+          <div>
+            <p><strong>Départ :</strong> {{ suggestion.depart }}</p>
+            <p><strong>Arrivée :</strong> {{ suggestion.arrivee }}</p>
+            <p><strong>Emissions :</strong> {{ suggestion.emissions }}</p>
+            <p><strong>Durée :</strong> {{ suggestion.duree }}</p>
+            <p><strong>Modes :</strong> {{ suggestion.modes }}</p>
+            <p><strong>Prix :</strong> {{ suggestion.prix }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

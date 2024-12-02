@@ -1,0 +1,22 @@
+<div class="impacts-container">
+    <h1>Impacts environnementaux :</h1>
+  
+    <div class="impact" *ngFor="let impact of impacts">
+      <div class="impact-type">
+        <span>{{ impact.type }} Emission CO2/h</span>
+      </div>
+      <div class="impact-bar-container">
+        <div class="impact-bar" [style.width.%]="impact.emission * 4"></div>
+        <span class="impact-value">{{ impact.emission }}</span>
+      </div>
+    </div>
+  
+    <p class="info">
+      Découvrez des façons de voyager tout en respectant la planète ! Adoptez des moyens de transport écologiques,
+      choisissez des hébergements responsables et soutenez les initiatives locales. Ensemble, réduisons notre empreinte
+      carbone pour préserver les merveilles du monde pour les générations futures.
+      <br />
+      <strong>Voyager, c’est aussi protéger. 💚</strong>
+    </p>
+  </div>
+  

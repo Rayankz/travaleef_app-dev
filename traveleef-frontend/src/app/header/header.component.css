@@ -1,6 +1,13 @@
-/* Styles pour le header, incluant la mise en forme du logo,
-   du menu, des liens, etc. Utilise les polices et couleurs
-   de la charte graphique de traveleef*/
+nav a {
+  text-decoration: none; /* Supprime les soulignements */
+  font-weight: bold;
+  color: black; /* Définit la couleur noire */
+}
+
+nav a:hover {
+  color: #555; /* Couleur légèrement plus claire au survol (optionnel) */
+}
+
 @font-face {
   font-family: 'More Sugar';
   src: url('../../assets/fonts/More_Sugar/MoreSugar-Thin.ttf');
@@ -8,6 +15,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 header {
   background-color: #C9DDB0;
   font-family: 'More Sugar';
@@ -39,6 +47,22 @@ nav li {
 }
 
 nav a {
-  text-decoration: none;
+  text-decoration: none; /* Supprime les soulignements */
   font-weight: bold;
+  color: black; /* Couleur noire pour les liens */
 }
+
+nav a:hover {
+  color: #555; /* Couleur légèrement plus claire au survol */
+}
+
+.se-connecter a {
+  text-decoration: none; /* Supprime les soulignements */
+  font-weight: bold;
+  color: black; /* Change la couleur du lien en noir */
+}
+
+.se-connecter a:hover {
+  color: #555; /* Couleur légèrement différente au survol */
+}
+

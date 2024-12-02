@@ -1,0 +1,14 @@
+<div class="historique-container">
+    <h1>Historique :</h1>
+  
+    <div class="voyage" *ngFor="let voyage of voyages">
+      <div class="voyage-details">
+        <span class="trajet">{{ voyage.trajet }}</span>
+        <span class="duree">⏱ {{ voyage.duree }}</span>
+        <span class="prix">{{ voyage.prix }}</span>
+        <span class="dates">{{ voyage.dates }}</span>
+      </div>
+      <button class="details-btn">i</button>
+    </div>
+  </div>
+  
