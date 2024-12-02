@@ -1,0 +1,89 @@
+/* Styles pour la page de connexion, incluant la mise en forme
+   du formulaire, des champs, des boutons, de l'image, etc.
+   Utilise les polices et couleurs de la charte graphique de traveleef */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+.login-container {
+  font-family: 'Montserrat';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.login-form {
+  background-color: #C9DDB0;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.google-login {
+  margin-bottom: 20px;
+}
+
+.google-btn {
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.google-btn img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #C9DDB0;
+  color: black;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-image {
+  width: 50%;
+  margin-left: 40px;
+}
+
+.login-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
