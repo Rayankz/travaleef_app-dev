@@ -5,6 +5,7 @@ import { SignupScreenComponent} from "./signup-screen/signup-screen.component";
 import { VosImpactsComponent } from './vos-impacts/vos-impacts.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { RechercherComponent } from './rechercher/rechercher.component';
 
 
 export const routes: Routes = [
@@ -14,6 +15,7 @@ export const routes: Routes = [
   { path: 'historique', component: HistoriqueComponent },
   { path: 'creer-un-compte', component: SignupScreenComponent },
   { path: '', component: AccueilComponent },
+  { path: 'rechercher', component: RechercherComponent },
 ];
 
 @NgModule({
