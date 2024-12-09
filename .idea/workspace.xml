@@ -4,11 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1a7b09-64cc-4b7c-b890-f01216a17eb3" name="Changes" comment="" />
+    <list default="true" id="bb1a7b09-64cc-4b7c-b890-f01216a17eb3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/traveleef-frontend/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/traveleef-frontend/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_common.js" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_platform-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_platform-browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/chunk-4CADKVKE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/chunk-4CADKVKE.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/chunk-EMPZUHKQ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/chunk-EMPZUHKQ.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/chunk-FV6YU5YM.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/chunk-FV6YU5YM.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/leaflet.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/leaflet.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/signup-screen/signup-screen.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/signup-screen/signup-screen.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/signup-screen/signup-screen.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/signup-screen/signup-screen.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -20,9 +45,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rayankz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rayankz/travaleef_app.git&quot;,
+    &quot;accountId&quot;: &quot;4ab1d61f-b4ec-43ee-b8b4-d974a9eae4a4&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.3.0/bin/php" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -32,25 +70,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.app.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Administrateur/PycharmProjects/ERGIA_back",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrateur/PycharmProjects/ERGIA_back&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/kherouarayan/Informatique/Dev/traveleef/traveleef-frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrateur\IdeaProjects\travaleef_app\backend\app" />
@@ -62,7 +102,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
       </set>
     </attachedChunks>
   </component>
@@ -82,6 +123,7 @@
       <workItem from="1732264868500" duration="123000" />
       <workItem from="1732662848257" duration="120000" />
       <workItem from="1733135318163" duration="3692000" />
+      <workItem from="1733750327030" duration="480000" />
     </task>
     <servers />
   </component>

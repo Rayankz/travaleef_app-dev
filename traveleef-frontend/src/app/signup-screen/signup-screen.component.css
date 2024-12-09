@@ -1,14 +1,23 @@
-/* Styles pour la page d'inscription. */
+/* Styles pour la page d'inscription */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
 .signup-container {
+  font-family: 'Montserrat';
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f0f0f0; /* Exemple de couleur */
+  background-color: #ffffff; /* Blanc comme la page de connexion */
 }
 
 .signup-form {
-  background-color: #fff;
+  background-color: #C9DDB0; /* Même couleur que la page de connexion */
   padding: 40px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -20,7 +29,7 @@
 }
 
 .google-btn {
-  background-color: #4285f4;
+  background-color: #4285f4; /* Garde la couleur bleue pour Google */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -59,9 +68,9 @@ input[type="password"] {
 }
 
 button {
-  background-color: #4CAF50; /* Exemple de couleur */
-  color: white;
-  padding: 10px 20px;
+  background-color: #C9DDB0; /* Même couleur que la page de connexion */
+  color: black; /* Texte noir */
+  padding: 20px 40px; /* Même padding que la page de connexion */
   border: none;
   border-radius: 5px;
   cursor: pointer;

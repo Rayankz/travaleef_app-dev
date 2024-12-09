@@ -1,49 +1,55 @@
 {
-  "hash": "711d69c1",
-  "configHash": "e628313b",
+  "hash": "1e4f84a2",
+  "configHash": "67b26d3e",
   "lockfileHash": "ca22d385",
-  "browserHash": "a3944c13",
+  "browserHash": "dd4c60fd",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "20a4fbf6",
+      "fileHash": "d9fb3bce",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "8943e6c3",
+      "fileHash": "6baad9d4",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "ddf70f81",
+      "fileHash": "dfef01b3",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "d843a7b6",
+      "fileHash": "6dbfc7c2",
       "needsInterop": false
     },
     "leaflet": {
       "src": "../../../../../node_modules/leaflet/dist/leaflet-src.js",
       "file": "leaflet.js",
-      "fileHash": "651bb9a3",
+      "fileHash": "e7b1a645",
       "needsInterop": true
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "a56edda1",
+      "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-FV6YU5YM": {
-      "file": "chunk-FV6YU5YM.js"
+    "chunk-OJDEUECY": {
+      "file": "chunk-OJDEUECY.js"
     },
-    "chunk-EMPZUHKQ": {
-      "file": "chunk-EMPZUHKQ.js"
+    "chunk-46YFAC2O": {
+      "file": "chunk-46YFAC2O.js"
     },
-    "chunk-4CADKVKE": {
-      "file": "chunk-4CADKVKE.js"
+    "chunk-VPOOTXOE": {
+      "file": "chunk-VPOOTXOE.js"
     },
     "chunk-WKYGNSYM": {
       "file": "chunk-WKYGNSYM.js"
