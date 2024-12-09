@@ -10,7 +10,7 @@
 }
 
 .login-container {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', serif;
   display: flex;
   justify-content: center;
   align-items: center;
