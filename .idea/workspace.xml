@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1a7b09-64cc-4b7c-b890-f01216a17eb3" name="Changes" comment="Connexion + inscription fini (affichage seulement, pas encore fonctionnel)">
-      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/traveleef-frontend/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/traveleef-frontend/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/login-screen/login-screen.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="bb1a7b09-64cc-4b7c-b890-f01216a17eb3" name="Changes" comment="Ajout des images" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,27 +48,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.app.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Administrateur/PycharmProjects/ERGIA_back",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "ts.external.directory.path": "/Users/kherouarayan/Informatique/Dev/traveleef/traveleef-frontend/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrateur/PycharmProjects/ERGIA_back&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/kherouarayan/Informatique/Dev/traveleef/traveleef-frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrateur\IdeaProjects\travaleef_app\backend\app" />
@@ -115,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733750853081</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ajout des images">
+      <option name="closed" value="true" />
+      <created>1733836441593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733836441593</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +127,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Connexion + inscription fini (affichage seulement, pas encore fonctionnel)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connexion + inscription fini (affichage seulement, pas encore fonctionnel)" />
+    <MESSAGE value="Ajout des images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout des images" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/travaleef_app$app.coverage" NAME="app Coverage Results" MODIFIED="1733137698370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
