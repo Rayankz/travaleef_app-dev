@@ -1,19 +1,14 @@
-/* Styles pour le footer, incluant la mise en forme des colonnes,
-   du texte, des liens, etc.  Utilise les polices et couleurs
-   de la charte graphique de traveleef */
-
 @font-face {
   font-family: 'Montserrat';
   src: url('../../assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
-
   font-weight: normal;
   font-style: normal;
 }
 
 footer {
   background-color: #C9DDB0;
-  font-family: 'Montserrat';
-  padding: 40px 0;
+  font-family: 'Montserrat', sans-serif;
+  padding: 40px 20px;
 }
 
 .container {
@@ -23,13 +18,60 @@ footer {
 
 .footer-columns {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .column {
-  width: 23%;
+  flex: 1;
+  min-width: 200px;
 }
 
 h3 {
-  margin-top: 0;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p, ul {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul li a:hover {
+  color: #70c1b3;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #777;
 }
