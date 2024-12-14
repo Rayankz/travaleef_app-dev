@@ -1,5 +1,5 @@
 from werkzeug.security import generate_password_hash, check_password_hash
-from backend.src.app.utiles.database import Database
+from backend.src.app.utiles.database import PostgresSingleton
 import re
 
 # Regex pour valider les emails et les mots de passe
@@ -18,16 +18,18 @@ class Utilisateur:
         self.average_co2_impact = average_co2_impact
         self.total_ecological_travel_time = total_ecological_travel_time
 
+# Utilitaires de validation
 def validate_email(email):
-    """Valide le format d'un email."""
     return bool(re.match(regex_email, email))
 
 def validate_password(password):
-    """Valide le format d'un mot de passe."""
     return bool(re.match(regex_password, password))
 
+# Gestionnaire de base de données
+db_singleton = PostgresSingleton()
+
+# Opérations CRUD
 def add_user(first_name, last_name, email, password, favorite_transport=None, favorite_destination=None):
-    """Ajoute un utilisateur dans la base de données."""
     if not validate_email(email):
         raise ValueError("Email invalide.")
     if not validate_password(password):
@@ -40,69 +42,33 @@ def add_user(first_name, last_name, email, password, favorite_transport=None, fa
         VALUES (%s, %s, %s, %s, %s, %s);
     """
     args = (first_name, last_name, email, hashed_password, favorite_transport, favorite_destination)
-    Database.execute_query(query, args)
+    db_singleton.execute_query(query, args)
 
 def get_all_user():
-    """Récupère tous les utilisateurs de la base de données."""
     query = "SELECT * FROM travel_comparator.users;"
-    result = Database.execute_query(query, fetch_all=True)
-    return result
+    return db_singleton.execute_query(query, fetch_all=True)
 
 def get_user_by_id(user_id):
-    """Récupère un utilisateur par son ID."""
     query = "SELECT * FROM travel_comparator.users WHERE id = %s;"
-    result = Database.execute_query(query, (user_id,), fetch_one=True)
-    return result
+    return db_singleton.execute_query(query, (user_id,), fetch_one=True)
 
 def get_user_by_email(email):
-    """Récupère un utilisateur par son email."""
     query = "SELECT * FROM travel_comparator.users WHERE email = %s;"
-    result = Database.execute_query(query, (email,), fetch_one=True)
-    return result
+    return db_singleton.execute_query(query, (email,), fetch_one=True)
 
-def update_user(user_id, first_name=None, last_name=None, email=None, password=None, favorite_transport=None, favorite_destination=None, average_co2_impact=None, total_ecological_travel_time=None):
-    """Met à jour les informations d'un utilisateur."""
+def update_user(user_id, **kwargs):
     fields = []
     args = []
-
-    if first_name:
-        fields.append("first_name = %s")
-        args.append(first_name)
-    if last_name:
-        fields.append("last_name = %s")
-        args.append(last_name)
-    if email:
-        if not validate_email(email):
-            raise ValueError("Email invalide.")
-        fields.append("email = %s")
-        args.append(email)
-    if password:
-        if not validate_password(password):
-            raise ValueError("Mot de passe invalide.")
-        hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
-        fields.append("password = %s")
-        args.append(hashed_password)
-    if favorite_transport:
-        fields.append("favorite_transport = %s")
-        args.append(favorite_transport)
-    if favorite_destination:
-        fields.append("favorite_destination = %s")
-        args.append(favorite_destination)
-    if average_co2_impact is not None:
-        fields.append("average_co2_impact = %s")
-        args.append(average_co2_impact)
-    if total_ecological_travel_time is not None:
-        fields.append("total_ecological_travel_time = %s")
-        args.append(total_ecological_travel_time)
-
+    for key, value in kwargs.items():
+        if key in ["first_name", "last_name", "email", "password", "favorite_transport", "favorite_destination", "average_co2_impact", "total_ecological_travel_time"]:
+            fields.append(f"{key} = %s")
+            args.append(value)
     if not fields:
         raise ValueError("Aucune donnée à mettre à jour.")
-
-    args.append(user_id)
     query = f"UPDATE travel_comparator.users SET {', '.join(fields)} WHERE id = %s;"
-    Database.execute_query(query, args)
+    args.append(user_id)
+    db_singleton.execute_query(query, args)
 
 def delete_user(user_id):
-    """Supprime un utilisateur de la base de données."""
     query = "DELETE FROM travel_comparator.users WHERE id = %s;"
-    Database.execute_query(query, (user_id,))
+    db_singleton.execute_query(query, (user_id,))

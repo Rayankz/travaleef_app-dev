@@ -35,8 +35,13 @@ python -m venv venv
 pip install python-dotenv
 pip install flask
 
-FLASK_APP=flaskr
-FLASK_ENV=development
+Pour Linux:
+    FLASK_APP=flaskr
+    FLASK_ENV=development
+
+Pour Windows:
+    $env:FLASK_APP = "flask"
+    $env:FLASK_ENV = "development"
 
  venv\Scripts\activate
 
