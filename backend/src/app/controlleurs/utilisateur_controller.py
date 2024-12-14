@@ -1,13 +1,12 @@
 from flask import Blueprint, request, jsonify
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_jwt_extended import jwt_required, get_jwt_identity, create_access_token, create_refresh_token, set_access_cookies, set_refresh_cookies, unset_jwt_cookies
-import src.app.services.utilisateur_service as us
-import src.app.services.mappers.utilisateur_mapper as um
+import backend.src.app.services.utilisateur_service as us
+import backend.src.app.services.mappers.utilisateur_mapper as um
 import base64
 
 utilisateur_bp = Blueprint('utilisateurs', __name__)
 not_found_error = {"message": "Utilisateur non trouvé"}, 404
-
 
 @utilisateur_bp.post('/secure/test_secure')
 @jwt_required()

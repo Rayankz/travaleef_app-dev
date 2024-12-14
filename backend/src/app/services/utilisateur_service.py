@@ -1,7 +1,6 @@
 from werkzeug.security import generate_password_hash, check_password_hash
-from src.app.utiles.database import Database
+from backend.src.app.utiles.database import Database
 import re
-
 
 # Regex pour valider les emails et les mots de passe
 regex_email = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'

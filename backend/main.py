@@ -7,7 +7,7 @@ import configparser
 
 # Charger la configuration
 config = configparser.ConfigParser()
-config_file = 'backend/config.ini'
+config_file = 'config.ini'
 if not os.path.exists(config_file):
     raise FileNotFoundError(f"Le fichier de configuration '{config_file}' est introuvable.")
 
@@ -36,4 +36,4 @@ app.config['CORS_SUPPORTS_CREDENTIALS'] = True
 jwt = JWTManager(app)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)

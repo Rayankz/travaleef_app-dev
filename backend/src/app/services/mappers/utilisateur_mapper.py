@@ -1,4 +1,4 @@
-import src.app.services.utilisateur_service as utilisateur_service
+import backend.src.app.services.utilisateur_service as utilisateur_service
 
 def mapper(utilisateur_tuple):
     utilisateur_list = []
