@@ -9,11 +9,17 @@ config = configparser.ConfigParser()
 config_path = os.path.join(os.path.dirname(__file__), 'config.ini')
 config.read(config_path)
 
+#Base de données local de l'application
 db_name = config['database']['name']
 db_user = config['database']['user']
 db_password = config['database']['password']
 db_host = config['database']['host']
 db_port = int(config['database']['port'])
+
+class ConfigApi:
+    #Paramètres de connexion pour l'api Google Flights
+    SERPAPI_API_KEY = config['serpapi']['API_KEY']
+    SERPAPI_BASE_URL = config['serpapi']['BASE_URL']
 
 class PostgresSingleton:
     _instance = None

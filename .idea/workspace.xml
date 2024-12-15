@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1a7b09-64cc-4b7c-b890-f01216a17eb3" name="Changes" comment="Ajout des images">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/travaleef_app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/ressources/Traveleaf.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/app/utiles/générate_config_ini.py" afterDir="false" />
+    <list default="true" id="bb1a7b09-64cc-4b7c-b890-f01216a17eb3" name="Changes" comment="Push de correction">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/app/controlleurs/vol_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/app/services/mappers/vol_mapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/app/services/vol_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/travaleef_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/travaleef_app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/app/controlleurs/utilisateur_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app/controlleurs/utilisateur_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/app/services/utilisateur_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app/services/utilisateur_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/app/utiles/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app/utiles/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/app/utiles/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app/utiles/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/app/utiles/générate_config_ini.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app/utiles/générate_config_ini.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,32 +62,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.app.executor": "Run",
-    "Python.database.executor": "Run",
-    "Python.générate_config_ini.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/kherouarayan/Informatique/Dev/traveleef",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "ts.external.directory.path": "/Users/kherouarayan/Informatique/Dev/traveleef/traveleef-frontend/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.database.executor&quot;: &quot;Run&quot;,
+    &quot;Python.générate_config_ini.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kherouarayan/Informatique/Dev/traveleef&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/kherouarayan/Informatique/Dev/traveleef/traveleef-frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrateur\PycharmProjects\travaleef_app\backend\src\config" />
@@ -96,7 +102,7 @@
       <recent name="C:\Users\Administrateur\IdeaProjects\travaleef_app\backend" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="générate_config_ini" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="travaleef_app" />
       <option name="ENV_FILES" value="" />
@@ -120,8 +126,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="travaleef_app" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.générate_config_ini" />
       </list>
     </recent_temporary>
@@ -156,6 +186,7 @@
       <workItem from="1734080530779" duration="33000" />
       <workItem from="1734094584619" duration="9000" />
       <workItem from="1734186083052" duration="7724000" />
+      <workItem from="1734263315261" duration="2850000" />
     </task>
     <task id="LOCAL-00001" summary="Connexion + inscription fini (affichage seulement, pas encore fonctionnel)">
       <option name="closed" value="true" />
@@ -201,13 +232,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Connexion + inscription fini (affichage seulement, pas encore fonctionnel)" />
     <MESSAGE value="Ajout des images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout des images" />
+    <MESSAGE value="Push de correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push de correction" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/travaleef_app$database.coverage" NAME="database Coverage Results" MODIFIED="1734203200679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/src/app/utiles" />
-    <SUITE FILE_PATH="coverage/traveleef$main.coverage" NAME="main Coverage Results" MODIFIED="1734191773540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
-    <SUITE FILE_PATH="coverage/travaleef_app$main.coverage" NAME="main Coverage Results" MODIFIED="1734203315279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/travaleef_app$générate_config_ini.coverage" NAME="générate_config_ini Coverage Results" MODIFIED="1734203273716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/src/app/utiles" />
+    <SUITE FILE_PATH="coverage/travaleef_app$main.coverage" NAME="main Coverage Results" MODIFIED="1734203315279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/traveleef$générate_config_ini.coverage" NAME="générate_config_ini Coverage Results" MODIFIED="1734267237049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/src/app/utiles" />
     <SUITE FILE_PATH="coverage/travaleef_app$app.coverage" NAME="app Coverage Results" MODIFIED="1733137698370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/travaleef_app$database.coverage" NAME="database Coverage Results" MODIFIED="1734203200679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/src/app/utiles" />
+    <SUITE FILE_PATH="coverage/traveleef$main.coverage" NAME="main Coverage Results" MODIFIED="1734267777694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
   </component>
 </project>
