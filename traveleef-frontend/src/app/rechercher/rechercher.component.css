@@ -4,41 +4,41 @@
     padding: 20px;
     font-family: 'More Sugar', sans-serif;
   }
-  
+
   h1 {
     font-size: 2rem;
     margin-bottom: 20px;
   }
-  
+
   .formulaire-recherche {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
   }
-  
+
   .formulaire-recherche input,
   .formulaire-recherche button {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
   }
-  
+
   .formulaire-recherche button {
     background-color: #70c1b3;
     color: white;
     cursor: pointer;
   }
-  
+
   .contenu-recherche {
     display: flex;
     justify-content: space-between;
     gap: 20px;
   }
-  
+
   .resultats {
     flex: 3;
   }
-  
+
   .resultat {
     border: 1px solid #ccc;
     padding: 15px;
@@ -47,18 +47,18 @@
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
+
   .resultat h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
-  
+
   .resultat .details {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .filtres {
     flex: 1;
     background-color: #f9f9f9;
@@ -66,29 +66,28 @@
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
+
   .filtres h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
   }
-  
+
   .filtre-item {
     margin-bottom: 20px;
   }
-  
+
   .filtre-item label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
   }
-  
+
   .filtre-item input[type="range"] {
     width: 100%;
   }
-  
+
   .transport-options label {
     display: flex;
     align-items: center;
     gap: 5px;
   }
-  

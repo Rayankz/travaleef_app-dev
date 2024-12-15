@@ -1,54 +1,53 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Import du CommonModule
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-rechercher',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, HttpClientModule], // Ajout de HttpClientModule ici
   templateUrl: './rechercher.component.html',
   styleUrls: ['./rechercher.component.css']
 })
 export class RechercherComponent {
-  // Données pour les résultats de recherche
-  results = [
-    {
-      trajet: 'Paris -> Manchester',
-      duree: '4h',
-      co2: '106kg CO2/Pers.',
-      transportIcons: ['✈️', '🚆'],
-      price: '40€/pers.',
-      details: [
-        {
-          from: 'Paris (cdg)',
-          to: 'Londres (lhr)',
-          time: '10H30',
-          co2: '80kg',
-          company: 'Air France'
-        },
-        {
-          from: 'Londres (lhr)',
-          to: 'Manchester Piccadilly',
-          time: '12H30',
-          co2: '26kg'
-        }
-      ]
-    },
-    {
-      trajet: 'Paris -> New York',
-      duree: '8H20',
-      co2: '1450kg CO2/Pers.',
-      transportIcons: ['✈️'],
-      price: '450€/pers.',
-      details: [
-        {
-          from: 'Paris (cdg)',
-          to: 'New York (jfk)',
-          time: '10H30',
-          co2: '1450kg',
-          company: 'Air France'
-        }
-      ]
+  departureId: string = '';
+  arrivalId: string = '';
+  outboundDate: string = '';
+  returnDate: string = '';
+  passengerCount: number = 1;
+
+  results: any[] = [];
+  errorMessage: string = '';
+
+  private apiUrl = 'http://127.0.0.1:5000/api/recherche_vols';
+
+  constructor(private http: HttpClient) {}
+
+  rechercherVols(): void {
+    if (!this.departureId || !this.arrivalId || !this.outboundDate) {
+      this.errorMessage = 'Veuillez remplir tous les champs requis.';
+      return;
     }
-  ];
+
+    let params = new HttpParams()
+      .set('departure_id', this.departureId)
+      .set('arrival_id', this.arrivalId)
+      .set('outbound_date', this.outboundDate);
+
+    if (this.returnDate) {
+      params = params.set('return_date', this.returnDate);
+    }
+
+    this.http.get<any>(this.apiUrl, { params }).subscribe({
+      next: (response) => {
+        this.results = response.best_flights || [];
+        this.errorMessage = '';
+      },
+      error: (error) => {
+        this.errorMessage = `Erreur : ${error.message}`;
+        this.results = [];
+      }
+    });
+  }
 }

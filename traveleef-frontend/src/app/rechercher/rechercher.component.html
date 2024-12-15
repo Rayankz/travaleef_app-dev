@@ -1,87 +1,57 @@
 <div class="recherche-container">
-    <h1>Recherche :</h1>
-  
-    <!-- Formulaire de recherche -->
-    <div class="formulaire-recherche">
-      <input type="text" placeholder="Départ" />
-      <input type="text" placeholder="Arrivée" />
-      <input type="date" placeholder="Date de départ" />
-      <input type="date" placeholder="Date d'arrivée" />
-      <input type="number" placeholder="2" min="1" />
-      <button>Rechercher</button>
+  <h1>Recherche :</h1>
+
+  <!-- Formulaire de recherche -->
+  <div class="formulaire-recherche">
+    <input type="text" placeholder="Départ (ex: CDG)" [(ngModel)]="departureId" />
+    <input type="text" placeholder="Arrivée (ex: JFK)" [(ngModel)]="arrivalId" />
+    <input type="date" placeholder="Date de départ" [(ngModel)]="outboundDate" />
+    <input type="date" placeholder="Date d'arrivée" [(ngModel)]="returnDate" />
+    <input type="number" placeholder="Nombre de passagers" min="1" [(ngModel)]="passengerCount" />
+    <button (click)="rechercherVols()">Rechercher</button>
+  </div>
+
+  <!-- Affichage des erreurs -->
+  @if (errorMessage) {
+    <div class="error-message">{{ errorMessage }}</div>
+  }
+
+  <div class="contenu-recherche">
+    <!-- Résultats -->
+    <div class="resultats">
+      <h2>Résultats :</h2>
+
+      @for (flight of results; track flight) {
+        <div class="resultat">
+          <h3>
+            {{ flight.flights[0]?.departure_airport?.name }} ➡️
+            {{ flight.flights[0]?.arrival_airport?.name }}
+            <span>{{ flight.total_duration }} min</span>
+          </h3>
+          <p>
+            {{ flight.carbon_emissions?.this_flight }} kg CO₂/Pers. - Transports :
+            <span *ngIf="flight.airline_logo">
+              <img [src]="flight.airline_logo" alt="Logo Compagnie" width="30" />
+            </span>
+          </p>
+          <div class="details">
+            <p>
+              <strong>{{ flight.flights[0]?.departure_airport?.id }}</strong> ➡️
+              {{ flight.flights[0]?.arrival_airport?.id }}
+            </p>
+            <p>{{ flight.price }}€/pers.</p>
+          </div>
+        </div>
+      }
     </div>
-  
-    <div class="contenu-recherche">
-      <!-- Résultats -->
-      <div class="resultats">
-        <h2>Résultats :</h2>
-        <div class="resultat">
-          <h3>Paris -> Manchester <span>4h</span></h3>
-          <p>106kg CO2/Pers. - Transports : ✈️ 🚆 🚗</p>
-          <div class="details">
-            <p><strong>Paris (CDG)</strong> ➡️ Londres (LHR) ➡️ Manchester</p>
-            <p>40€/pers.</p>
-          </div>
-        </div>
-  
-        <div class="resultat">
-          <h3>Paris -> New York <span>8h20</span></h3>
-          <p>1450kg CO2/Pers. - Transports : ✈️</p>
-          <div class="details">
-            <p><strong>Paris (CDG)</strong> ➡️ New York (JFK)</p>
-            <p>450€/pers.</p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Filtres -->
-      <div class="filtres">
-        <h3>Filtre</h3>
-        <div class="filtre-item">
-          <label>Tranche de prix</label>
-          <input type="range" min="0" max="150" value="150" />
-          <span>150€</span>
-        </div>
-  
-        <div class="filtre-item">
-          <label>Durée</label>
-          <input type="range" min="0" max="10" value="1" />
-          <span>1H</span>
-        </div>
-  
-        <div class="filtre-item">
-          <label>Empreinte carbone max.</label>
-          <input type="number" min="0" max="200" value="130" />
-          <span>kg/pers.</span>
-        </div>
-  
-        <div class="filtre-item">
-          <label>Moyens de transports</label>
-          <div class="transport-options">
-            <label><input type="checkbox" /> Avion ✈️</label>
-            <label><input type="checkbox" /> Train 🚆</label>
-            <label><input type="checkbox" /> Bus 🚌</label>
-            <label><input type="checkbox" /> Covoiturage 🚗</label>
-            <label><input type="checkbox" /> Bateaux 🚢</label>
-          </div>
-        </div>
-  
-        <div class="filtre-item">
-          <label>Label écologiques</label>
-          <select>
-            <option value="aucun">Aucun</option>
-            <option value="eco1">Label 1</option>
-            <option value="eco2">Label 2</option>
-          </select>
-        </div>
-  
-        <div class="filtre-item">
-          <label>Accessibilité</label>
-          <div>
-            <label><input type="checkbox" /> Pour personne à mobilité réduite</label>
-          </div>
-        </div>
+
+    <!-- Filtres -->
+    <div class="filtres">
+      <h3>Filtre</h3>
+      <div class="filtre-item">
+        <label>Tranche de prix</label>
+        <input type="range" min="0" max="2000" />
       </div>
     </div>
   </div>
-  
+</div>

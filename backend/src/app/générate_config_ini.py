@@ -15,6 +15,10 @@ def generate_config():
         'port': '5432',
         'name': 'traveleef'
     }
+    config['serpapi'] = {
+        'API_KEY': '???', #??? -> Fournir la clé api
+        'BASE_URL': 'https://serpapi.com/search/',
+    }
 
     with open(config_path, 'w') as configfile:
         config.write(configfile)
