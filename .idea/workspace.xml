@@ -6,10 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="bb1a7b09-64cc-4b7c-b890-f01216a17eb3" name="Changes" comment="Ajour de la connexion à l'api google flight (qui est fonctionnel pour faire des recherches de vol), il faudra juste modifier les champs de requettes en fonction des critères de recherche de notre application !">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/app/utiles/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app/utiles/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/assets/Charte Graphique Traveleef/Logo_Traveleef_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/traveleef-frontend/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/traveleef-frontend/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_platform-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_platform-browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/@angular_router.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/chunk-OJDEUECY.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/.angular/cache/17.3.11/vite/deps/chunk-OJDEUECY.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/rechercher/rechercher.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/rechercher/rechercher.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/rechercher/rechercher.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/rechercher/rechercher.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traveleef-frontend/src/app/rechercher/rechercher.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/traveleef-frontend/src/app/rechercher/rechercher.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +43,12 @@
     &quot;assignee&quot;: &quot;Rayankz&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Rayankz/travaleef_app.git",
-    "accountId": "4ab1d61f-b4ec-43ee-b8b4-d974a9eae4a4"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rayankz/travaleef_app.git&quot;,
+    &quot;accountId&quot;: &quot;4ab1d61f-b4ec-43ee-b8b4-d974a9eae4a4&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -178,7 +186,7 @@
       <workItem from="1734080530779" duration="33000" />
       <workItem from="1734094584619" duration="9000" />
       <workItem from="1734186083052" duration="7724000" />
-      <workItem from="1734263315261" duration="4453000" />
+      <workItem from="1734263315261" duration="10535000" />
     </task>
     <task id="LOCAL-00001" summary="Connexion + inscription fini (affichage seulement, pas encore fonctionnel)">
       <option name="closed" value="true" />
@@ -212,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734268082789</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modification de sécurité, il faudra fournir la clé api manuellement pour la connexion à google flight">
+      <option name="closed" value="true" />
+      <created>1734272525087</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734272525087</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +250,8 @@
     <MESSAGE value="Ajout des images" />
     <MESSAGE value="Push de correction" />
     <MESSAGE value="Ajour de la connexion à l'api google flight (qui est fonctionnel pour faire des recherches de vol), il faudra juste modifier les champs de requettes en fonction des critères de recherche de notre application !" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajour de la connexion à l'api google flight (qui est fonctionnel pour faire des recherches de vol), il faudra juste modifier les champs de requettes en fonction des critères de recherche de notre application !" />
+    <MESSAGE value="Petite modif, il faudra rajouter la clé de l'api google flight manuellement pour une question de sécurité" />
+    <option name="LAST_COMMIT_MESSAGE" value="Petite modif, il faudra rajouter la clé de l'api google flight manuellement pour une question de sécurité" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/travaleef_app$générate_config_ini.coverage" NAME="générate_config_ini Coverage Results" MODIFIED="1734203273716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/src/app/utiles" />
@@ -242,6 +259,6 @@
     <SUITE FILE_PATH="coverage/traveleef$générate_config_ini.coverage" NAME="générate_config_ini Coverage Results" MODIFIED="1734267237049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/src/app/utiles" />
     <SUITE FILE_PATH="coverage/travaleef_app$app.coverage" NAME="app Coverage Results" MODIFIED="1733137698370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/travaleef_app$database.coverage" NAME="database Coverage Results" MODIFIED="1734203200679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/src/app/utiles" />
-    <SUITE FILE_PATH="coverage/traveleef$main.coverage" NAME="main Coverage Results" MODIFIED="1734267777694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/traveleef$main.coverage" NAME="main Coverage Results" MODIFIED="1734283761899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
   </component>
 </project>

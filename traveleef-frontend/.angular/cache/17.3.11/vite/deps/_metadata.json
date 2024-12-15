@@ -1,49 +1,58 @@
 {
-  "hash": "1e4f84a2",
-  "configHash": "67b26d3e",
+  "hash": "fd1fc5a1",
+  "configHash": "e89769ce",
   "lockfileHash": "ca22d385",
-  "browserHash": "189613e6",
+  "browserHash": "7763681e",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "a20e8685",
+      "fileHash": "6103ceff",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "bb12e24d",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "cc5a6f7a",
+      "fileHash": "d33947bd",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "574a87e9",
+      "fileHash": "691af6e7",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "c7b2e381",
+      "fileHash": "8dcbf5cd",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "f157d302",
+      "fileHash": "39870b1b",
       "needsInterop": false
     },
     "leaflet": {
       "src": "../../../../../node_modules/leaflet/dist/leaflet-src.js",
       "file": "leaflet.js",
-      "fileHash": "0d1f20e2",
+      "fileHash": "a48e86ab",
       "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-OJDEUECY": {
-      "file": "chunk-OJDEUECY.js"
+    "chunk-F4F7U7LY": {
+      "file": "chunk-F4F7U7LY.js"
+    },
+    "chunk-ZLCRLSJR": {
+      "file": "chunk-ZLCRLSJR.js"
     },
     "chunk-46YFAC2O": {
       "file": "chunk-46YFAC2O.js"
