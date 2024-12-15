@@ -1,8 +1,8 @@
-from werkzeug.security import generate_password_hash, check_password_hash
-from backend.src.app.utiles.database import PostgresSingleton
-import re
+from werkzeug.security import generate_password_hash
 
-# Regex pour valider les emails et les mots de passe
+from backend.src.app.database import db_singleton
+from backend.src.app.utiles.utiles import validate_password, validate_email
+
 regex_email = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
 regex_password = r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
 
@@ -18,15 +18,6 @@ class Utilisateur:
         self.average_co2_impact = average_co2_impact
         self.total_ecological_travel_time = total_ecological_travel_time
 
-# Utilitaires de validation
-def validate_email(email):
-    return bool(re.match(regex_email, email))
-
-def validate_password(password):
-    return bool(re.match(regex_password, password))
-
-# Gestionnaire de base de données
-db_singleton = PostgresSingleton()
 
 # Opérations CRUD
 def add_user(first_name, last_name, email, password, favorite_transport=None, favorite_destination=None):

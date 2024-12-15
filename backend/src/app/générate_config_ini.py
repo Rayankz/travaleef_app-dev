@@ -2,6 +2,7 @@ import configparser
 import os
 
 # Génération automatique de config.ini
+
 def generate_config():
     current_dir = os.path.dirname(__file__)
     config_path = os.path.join(current_dir, 'config.ini')

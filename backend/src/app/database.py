@@ -110,10 +110,7 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Erreur lors de l'exécution de la requête: {e}")
     finally:
-        # Libération de la connexion
         db_singleton.release_connection(connection)
-
-    # Fermeture de toutes les connexions lors de l'arrêt de l'application
     db_singleton.close_all_connections()
 
 db_singleton = PostgresSingleton(dbname=db_name, user=db_user, password=db_password, host=db_host, port=db_port)
