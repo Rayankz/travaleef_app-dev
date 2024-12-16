@@ -1,25 +1,37 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpParams, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-rechercher',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule], // Ajout de HttpClientModule ici
+  imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './rechercher.component.html',
   styleUrls: ['./rechercher.component.css']
 })
 export class RechercherComponent {
+  // Champs de recherche
   departureId: string = '';
   arrivalId: string = '';
   outboundDate: string = '';
   returnDate: string = '';
   passengerCount: number = 1;
 
+  // Résultats des vols
   results: any[] = [];
+  filteredResults: any[] = [];
   errorMessage: string = '';
 
+  // Valeurs des filtres
+  maxPrice: number = 10000;
+  maxDuration: number = 5000; // en minutes
+  maxCO2: number = 5000; // en kg
+
+  // Popup pour les détails du vol
+  selectedFlight: any = null;
+
+  // URL de l'API backend
   private apiUrl = 'http://127.0.0.1:5000/api/recherche_vols';
 
   constructor(private http: HttpClient) {}
@@ -42,12 +54,40 @@ export class RechercherComponent {
     this.http.get<any>(this.apiUrl, { params }).subscribe({
       next: (response) => {
         this.results = response.best_flights || [];
+        this.filteredResults = [...this.results];
         this.errorMessage = '';
+        this.applyFilters();
       },
       error: (error) => {
         this.errorMessage = `Erreur : ${error.message}`;
         this.results = [];
+        this.filteredResults = [];
       }
     });
+  }
+
+  applyFilters(): void {
+    this.filteredResults = this.results.filter((flight) => {
+      const price = flight.price || 0;
+      const duration = flight.total_duration || 0;
+      const co2 = flight.carbon_emissions?.this_flight || 0;
+
+      return price <= this.maxPrice && duration <= this.maxDuration && this.getCO2PerPerson(co2) <= this.maxCO2;
+    });
+  }
+
+  // Calculer les émissions de CO₂ par personne
+  getCO2PerPerson(totalCO2: number): number {
+    return Math.round(totalCO2 / 250);
+  }
+
+  // Ouvrir les détails d'un vol
+  openDetails(flight: any): void {
+    this.selectedFlight = flight;
+  }
+
+  // Fermer les détails du vol
+  closeDetails(): void {
+    this.selectedFlight = null;
   }
 }

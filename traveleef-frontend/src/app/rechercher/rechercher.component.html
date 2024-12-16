@@ -12,46 +12,126 @@
   </div>
 
   <!-- Affichage des erreurs -->
-  @if (errorMessage) {
-    <div class="error-message">{{ errorMessage }}</div>
-  }
+  <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
 
+  <!-- Résultats -->
   <div class="contenu-recherche">
-    <!-- Résultats -->
     <div class="resultats">
       <h2>Résultats :</h2>
-
-      @for (flight of results; track flight) {
-        <div class="resultat">
+      <div *ngIf="filteredResults.length > 0; else noResultTemplate">
+        <div
+          class="resultat hover-effect"
+          *ngFor="let flight of filteredResults"
+          (click)="openDetails(flight)"
+        >
           <h3>
             {{ flight.flights[0]?.departure_airport?.name }} ➡️
             {{ flight.flights[0]?.arrival_airport?.name }}
             <span>{{ flight.total_duration }} min</span>
           </h3>
           <p>
-            {{ flight.carbon_emissions?.this_flight }} kg CO₂/Pers. - Transports :
-            <span *ngIf="flight.airline_logo">
-              <img [src]="flight.airline_logo" alt="Logo Compagnie" width="30" />
-            </span>
+            {{ getCO2PerPerson(flight.carbon_emissions?.this_flight) }} kg CO₂/Pers. - {{ flight.price }} €
           </p>
-          <div class="details">
-            <p>
-              <strong>{{ flight.flights[0]?.departure_airport?.id }}</strong> ➡️
-              {{ flight.flights[0]?.arrival_airport?.id }}
-            </p>
-            <p>{{ flight.price }}€/pers.</p>
-          </div>
+          <img
+            *ngIf="flight.airline_logo"
+            [src]="flight.airline_logo"
+            alt="Logo Compagnie"
+            class="airline-logo"
+          />
         </div>
-      }
+      </div>
+      <ng-template #noResultTemplate>
+        <div class="no-result">Aucun résultat trouvé.</div>
+      </ng-template>
     </div>
 
     <!-- Filtres -->
     <div class="filtres">
-      <h3>Filtre</h3>
+      <h3>Filtres</h3>
+
+      <!-- Filtre : Tranche de prix -->
       <div class="filtre-item">
-        <label>Tranche de prix</label>
-        <input type="range" min="0" max="2000" />
+        <label>Tranche de prix (max)</label>
+        <input type="range" min="0" max="10000" [(ngModel)]="maxPrice" (input)="applyFilters()" />
+        <span>{{ maxPrice }}€</span>
       </div>
+
+      <!-- Filtre : Durée -->
+      <div class="filtre-item">
+        <label>Durée (max en min)</label>
+        <input type="range" min="0" max="5000" [(ngModel)]="maxDuration" (input)="applyFilters()" />
+        <span>{{ maxDuration }} min</span>
+      </div>
+
+      <!-- Filtre : Empreinte carbone -->
+      <div class="filtre-item">
+        <label>Empreinte carbone (max en kg)</label>
+        <input type="range" min="0" max="5000" [(ngModel)]="maxCO2" (input)="applyFilters()" />
+        <span>{{ maxCO2 }} kg CO₂</span>
+      </div>
+
+      <!-- Filtre : Moyens de transport -->
+      <div class="filtre-item">
+        <label>Moyens de transport</label>
+        <div class="transport-options">
+          <label><input type="checkbox" /> Avion ✈️</label>
+          <label><input type="checkbox" /> Train 🚆</label>
+          <label><input type="checkbox" /> Bus 🚌</label>
+          <label><input type="checkbox" /> Covoiturage 🚗</label>
+          <label><input type="checkbox" /> Bateaux 🚢</label>
+        </div>
+      </div>
+
+      <!-- Filtre : Accessibilité -->
+      <div class="filtre-item">
+        <label>Accessibilité</label>
+        <div>
+          <label><input type="checkbox" /> Accessibilité 🧑‍🦽</label>
+        </div>
+      </div>
+
+      <!-- Filtre : Labels écologiques -->
+      <div class="filtre-item">
+        <label>Labels écologiques</label>
+        <select>
+          <option value="aucun">Aucun</option>
+          <option value="eco1">Label 1</option>
+          <option value="eco2">Label 2</option>
+        </select>
+      </div>
+
+      <!-- Filtre : Classe de voyage -->
+      <div class="filtre-item">
+        <label>Classe de voyage</label>
+        <select>
+          <option value="eco">Économique</option>
+          <option value="premium">Premium</option>
+          <option value="business">Business</option>
+          <option value="first">Première classe</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup des détails -->
+  <div class="popup" *ngIf="selectedFlight">
+    <div class="popup-content">
+      <h2>Détails du vol</h2>
+      <img
+        *ngIf="selectedFlight.airline_logo"
+        [src]="selectedFlight.airline_logo"
+        alt="Logo Compagnie"
+        class="airline-logo-detail"
+      />
+      <p><strong>Compagnie :</strong> {{ selectedFlight.flights[0]?.airline }}</p>
+      <p><strong>Avion :</strong> {{ selectedFlight.flights[0]?.airplane }}</p>
+      <p><strong>Durée :</strong> {{ selectedFlight.total_duration }} min</p>
+      <p><strong>Départ :</strong> {{ selectedFlight.flights[0]?.departure_airport?.name }}</p>
+      <p><strong>Arrivée :</strong> {{ selectedFlight.flights[0]?.arrival_airport?.name }}</p>
+      <p><strong>Prix :</strong> {{ selectedFlight.price }} €</p>
+      <p><strong>Émissions de CO₂ :</strong> {{ getCO2PerPerson(selectedFlight.carbon_emissions?.this_flight) }} kg</p>
+      <p><strong>Classe de voyage :</strong> {{ selectedFlight.flights[0]?.travel_class }}</p>
+      <button (click)="closeDetails()">Fermer</button>
     </div>
   </div>
 </div>
